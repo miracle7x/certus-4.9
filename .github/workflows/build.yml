@@ -3,7 +3,7 @@ name: Build-Kernel-Pearl
 on:
   workflow_dispatch:
   push:
-    branches: [ Non-Treble-Non-KSU ]   # sesuaikan dengan branch default repo kamu
+    branches: [ 10-alps ]   # sesuaikan dengan branch default repo kamu
 
 env:
   ARCH: arm64
