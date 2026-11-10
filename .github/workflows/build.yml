@@ -129,8 +129,8 @@ jobs:
 
           sed -i 's/^do.devicecheck=.*/do.devicecheck=1/' anykernel/anykernel.sh
           sed -i 's/^device.name1=.*/device.name1=cactus/' anykernel/anykernel.sh
-          sed -i 's/^device.name1=.*/device.name2=cereus/' anykernel/anykernel.sh
-          sed -i 's/^device.name1=.*/device.name1=certus/' anykernel/anykernel.sh
+          sed -i 's/^device.name2=.*/device.name2=certus/' anykernel/anykernel.sh
+          sed -i 's/^device.name3=.*/device.name3=certus/' anykernel/anykernel.sh
           sed -i 's/^is_slot_device=.*/is_slot_device=1/' anykernel/anykernel.sh
           sed -i 's|^BLOCK=.*|BLOCK=/dev/block/bootdevice/by-name/boot;|' anykernel/anykernel.sh
           cp out/arch/arm64/boot/Image.gz-dtb anykernel/Image.gz-dtb
