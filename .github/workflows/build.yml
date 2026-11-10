@@ -122,15 +122,13 @@ jobs:
 
       - name: 📦 Package
         run: |
-          git clone --depth=1 https://github.com/osm0sis/AnyKernel3.git anykernel
+          git clone --depth=1 https://github.com/miracle7x/AnyKernel3.git anykernel
           rm -rf anykernel/.git anykernel/README.md anykernel/modules anykernel/patch anykernel/ramdisk
 
-          sed -i 's/^kernel.string=.*/kernel.string=perf kernel tissot by cappuccino/' anykernel/anykernel.sh
+          sed -i 's/^kernel.string=.*/kernel.string=Pearlkernel certus by cappuccino/' anykernel/anykernel.sh
 
           sed -i 's/^do.devicecheck=.*/do.devicecheck=1/' anykernel/anykernel.sh
           sed -i 's/^device.name1=.*/device.name1=cactus/' anykernel/anykernel.sh
-          sed -i 's/^device.name2=.*/device.name2=certus/' anykernel/anykernel.sh
-          sed -i 's/^device.name3=.*/device.name3=certus/' anykernel/anykernel.sh
           sed -i 's/^is_slot_device=.*/is_slot_device=1/' anykernel/anykernel.sh
           sed -i 's|^BLOCK=.*|BLOCK=/dev/block/bootdevice/by-name/boot;|' anykernel/anykernel.sh
           cp out/arch/arm64/boot/Image.gz-dtb anykernel/Image.gz-dtb
